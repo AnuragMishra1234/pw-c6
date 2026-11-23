@@ -124,7 +124,7 @@ export async function queryGroqAssistant(
   timeoutMs: number = 10000
 ): Promise<AssistantResponse> {
   const apiKey = process.env.GROQ_API_KEY;
-  const model = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+  const model = process.env.GROQ_MODEL || "qwen/qwen3.8-27b";
 
   // If no Groq API key is configured, return the deterministic fallback gracefully
   if (!apiKey || apiKey.trim() === "") {
