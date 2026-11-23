@@ -1,61 +1,72 @@
 # BreatheWise — Your Personal Clean-Air Companion
 ### Challenge 6: Urban Air Quality Assistant | Production Web Application
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-pw--c6.vercel.app-2D6A4F?style=for-the-badge&logo=vercel&logoColor=white)](https://pw-c6.vercel.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-133124?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AnuragMishra1234/pw-c6)
+[![Next.js 14](https://img.shields.io/badge/Next.js-14.2%20App%20Router-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6%20Strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tests Passing](https://img.shields.io/badge/Vitest-33%2F33%20Passing-16A34A?style=for-the-badge&logo=vitest&logoColor=white)](https://github.com/AnuragMishra1234/pw-c6)
+
 > **Core Philosophy:** *"Don't just show pollution. Help people make better decisions because of it."*
+
+🌐 **Live Application URL:** [https://pw-c6.vercel.app/](https://pw-c6.vercel.app/)  
+📂 **GitHub Repository:** [https://github.com/AnuragMishra1234/pw-c6](https://github.com/AnuragMishra1234/pw-c6)  
+📖 **Deployment Guide:** [deployment_guide.md](file:///e:/PW-chal6-Urban-aqi/deployment_guide.md) or [GitHub Deployment Guide](https://github.com/AnuragMishra1234/pw-c6/blob/main/deployment_guide.md)
 
 ---
 
 ## 1. Project Overview
-**Application Name:** BreatheWise  
-**Tagline:** Your Personal Clean-Air Companion  
-**Challenge Vertical:** Challenge 6 — Urban Air Quality Assistant  
-**Repository:** [https://github.com/AnuragMishra1234/pw-c6](https://github.com/AnuragMishra1234/pw-c6)  
-**Deployment Target:** Vercel (Next.js 14 App Router, Zero Server-State Architecture)
+- **Application Name:** BreatheWise
+- **Tagline:** Your Personal Clean-Air Companion
+- **Challenge Vertical:** Challenge 6 — Urban Air Quality Assistant
+- **Live Deployment:** [https://pw-c6.vercel.app/](https://pw-c6.vercel.app/)
+- **Repository:** [https://github.com/AnuragMishra1234/pw-c6](https://github.com/AnuragMishra1234/pw-c6)
+- **Deployment Platform:** Vercel (Production Edge Network)
 
 ---
 
 ## 2. Chosen Challenge Vertical
 **Challenge 6: Urban Air Quality Assistant**  
-Urban centers worldwide, particularly across North India and major global metropolitan corridors during winter thermal inversions, face severe smog crises characterized by hazardous PM2.5, PM10, and nitrogen dioxide spikes. While numerous dashboards display raw AQI numbers, ordinary families are left asking:
-1. *What does this number mean for my children playing outside today?*
-2. *What can I do if I cannot afford an expensive air purifier?*
-3. *How should I travel to work without inhaling dense roadside exhaust plumes?*
-4. *How do my daily choices reduce both my personal toxic exposure and my neighborhood's emissions?*
+Severe urban air pollution and winter smog crises affect millions of individuals, families, and communities across major urban corridors. Most existing solutions merely act as passive data displays showing alarmist red or purple AQI numbers without telling users what to do differently today.
 
-BreatheWise answers these three questions through real-time atmospheric intelligence, a deterministic recommendation engine, evidence-based indoor practices, transparent transport emission modeling, and an optional AI explanation layer.
+BreatheWise addresses this directly by answering three fundamental questions:
+1. **What is the current air quality around me?**
+2. **What should I do differently today?**
+3. **How can my everyday choices reduce toxic exposure and personal emissions?**
 
 ---
 
 ## 3. Problem Statement & Context
-During winter, shallow atmospheric boundary layers trap vehicular exhaust, construction dust, and biomass burning close to ground level. Existing solutions suffer from three major shortcomings:
-- **Alarmism Without Action:** Dashboards display intimidating red or purple badges without providing actionable lifestyle adaptations.
-- **Affluence Bias:** Most advice assumes households own multiple HEPA purifiers and can stay indoors indefinitely, ignoring outdoor workers and modest households.
-- **Conflation of Concepts:** Applications frequently confuse *personal toxic exposure reduction* (shielding lungs from roadside plumes) with *emission reduction* (reducing the carbon/particulate footprint of travel).
+During winter, atmospheric thermal inversions trap ground-level vehicular exhaust, road dust, and biomass smoke. Ordinary families face distinct challenges:
+- **Alarmism Without Action:** Dashboards show frightening numbers without pragmatic exposure-reduction guidance.
+- **Affluence Bias:** Standard online advice assumes everyone owns high-end HEPA purifiers and can work remotely, leaving outdoor workers, commuters, and modest households unsupported.
+- **Conflation of Crucial Concepts:** People often confuse *reducing personal roadside toxic exposure* (e.g., choosing an enclosed metro car with air filters over riding an open two-wheeler) with *reducing greenhouse gas emissions* (e.g., taking public transit instead of a solo petrol car).
 
 ---
 
 ## 4. Proposed Solution
-BreatheWise bridges the gap between environmental monitoring and daily human decisions:
-- **Live Air Intelligence:** Real-time atmospheric retrieval via Open-Meteo Air Quality & Geocoding APIs (tracking US AQI, PM2.5, PM10, NO₂, O₃, and 24-hour forecast trends).
+BreatheWise transforms atmospheric telemetry into actionable everyday wellness:
+- **Live Air Intelligence:** Real-time atmospheric retrieval via Open-Meteo Air Quality & Geocoding APIs (tracking US AQI, $\text{PM}_{2.5}$, $\text{PM}_{10}$, $\text{NO}_2$, $\text{O}_3$, and 24-hour forecast curves).
 - **Personalized Daily Clean-Air Plan:** A deterministic recommendation engine evaluating user household composition (children, seniors, multi-generational), daily routines (outdoor exercise, commute, outdoor work), transport modes, and dwelling resources.
-- **Indoor Air Sanctuary Advisor:** Practical, low-cost/free indoor clean air guidance (wet mopping vs broom sweeping, kitchen exhaust management, strategic midday ventilation timing, draft-gap sealing, and scientific myth-busting).
+- **Indoor Air Sanctuary Advisor:** Practical, low-cost and zero-cost indoor clean air practices (damp mopping vs broom sweeping, kitchen exhaust management, strategic midday ventilation timing, draft-gap sealing, and scientific myth-busting).
 - **Smart Mobility Assistant:** Transparent comparative commute analysis demonstrating both personal exposure risk and estimated transport emissions across transit modes.
-- **Impact Tracker:** Daily habit and sustainability tracking with transparent CO₂ avoidance modeling stored locally in the browser.
-- **Groq AI Assistant:** An optional plain-language conversational interface grounded strictly in verified air quality data and deterministic recommendations.
+- **Impact Tracker:** Daily habit and sustainability tracking with transparent $\text{CO}_2$ avoidance modeling stored locally in the browser.
+- **Groq AI Assistant:** An optional plain-language conversational helper grounded strictly in verified air quality data and deterministic recommendations.
 
 ---
 
 ## 5. Technology Stack
-- **Framework:** Next.js 14.2 (App Router, Server Components & Route Handlers)
-- **Language:** TypeScript 5.6 (Strict Mode enabled throughout)
-- **Styling:** Tailwind CSS 3.4 with custom environmental color tokens (Forest Greens, Sage, and standardized US AQI color codes)
+- **Frontend Framework:** Next.js 14.2 (App Router, Server Components & Client Hooks)
+- **Programming Language:** TypeScript 5.6 (Strict Mode enabled throughout)
+- **Styling:** Tailwind CSS 3.4 with custom environmental design tokens (Deep Forest Green `#1B4332`, Sage `#CBD8D1`, and EPA US AQI color codes)
 - **Icons:** Lucide React
 - **Data Visualizations:** Recharts (24-hour AQI trend area charts)
 - **Animations:** Framer Motion (subtle, accessible transitions)
 - **Validation:** Zod 3.23 (strict API input validation and sanitization)
-- **Testing:** Vitest 2.1 + Testing Library (JSDOM environment, 32 unit & component tests passing)
-- **APIs:** Open-Meteo Geocoding API & Open-Meteo Air Quality API
-- **AI Intelligence Layer:** Groq Cloud API (`llama-3.3-70b-versatile` with configurable fallback)
+- **Testing:** Vitest 2.1 + Testing Library (JSDOM environment, 33 unit, component & integration tests passing)
+- **External Atmospheric APIs:** Open-Meteo Geocoding API & Open-Meteo Air Quality API
+- **AI Intelligence Layer:** Groq Cloud API (`qwen/qwen3.8-27b` with automatic deterministic fallback)
+- **Production Host:** Vercel ([https://pw-c6.vercel.app/](https://pw-c6.vercel.app/))
 
 ---
 
@@ -63,34 +74,41 @@ BreatheWise bridges the gap between environmental monitoring and daily human dec
 
 ```mermaid
 flowchart TD
-    Client[Next.js Client Application] -->|Fetch Clean Air Data| AQIRoute["/api/air-quality (Route Handler)"]
-    Client -->|Search Locations| GeoRoute["/api/geocoding (Route Handler)"]
-    Client -->|Ask Question (Optional)| AssistantRoute["/api/assistant (Route Handler)"]
+    User([User / Browser]) <-->|HTTPS / Responsive UI| VercelEdge["Vercel Edge Network (https://pw-c6.vercel.app/)"]
     
-    AQIRoute -->|Cached 5m| OpenMeteoAQI["Open-Meteo Air Quality API"]
-    GeoRoute -->|Cached 1h| OpenMeteoGeo["Open-Meteo Geocoding API"]
-    AssistantRoute -->|Zod & Rate Limit| GroqAI["Groq Cloud API (Server-Side Key)"]
-    
-    Client --> LocalStorage[("Browser localStorage (Prefs & Impact)")]
-    
-    subgraph Core Deterministic Logic
-        RecEngine["CleanAirRecommendationEngine (lib/recommendations)"]
-        AqiCalc["AQI Calculator & Standards (lib/air-quality)"]
-        EmissionsCalc["MobilityEmissionCalculator (lib/emissions)"]
-        IndoorGuide["Indoor Advisor Database (lib/indoor)"]
+    subgraph NextApp["Next.js 14 App Router"]
+        ClientApp["Client Components (Dashboard, Plan, Advisor, Mobility, Impact)"]
+        LocalStorage[("Browser localStorage (Prefs & Habits)")]
+        
+        subgraph ServerRouteHandlers["Server Route Handlers"]
+            AQIRoute["/api/air-quality"]
+            GeoRoute["/api/geocoding"]
+            AssistantRoute["/api/assistant"]
+        end
+        
+        subgraph CoreDeterministicLib["Deterministic Engine (Source of Truth)"]
+            RecEngine["CleanAirRecommendationEngine (lib/recommendations)"]
+            AqiCalc["AQI Standard Calculator (lib/air-quality)"]
+            EmissionsCalc["MobilityEmissionCalculator (lib/emissions)"]
+            IndoorDB["Indoor Advisor Database (lib/indoor)"]
+        end
     end
     
-    Client --> RecEngine
-    Client --> AqiCalc
-    Client --> EmissionsCalc
-    Client --> IndoorGuide
+    VercelEdge <--> NextApp
+    ClientApp <--> LocalStorage
+    ClientApp --> CoreDeterministicLib
+    ClientApp --> ServerRouteHandlers
+    
+    AQIRoute <-->|Cached 5m| OpenMeteoAQI[("Open-Meteo Air Quality API")]
+    GeoRoute <-->|Cached 1h| OpenMeteoGeo[("Open-Meteo Geocoding API")]
+    AssistantRoute <-->|Zod & Rate Limit| GroqAI[("Groq Cloud API (qwen/qwen3.8-27b)")]
 ```
 
 ---
 
 ## 7. How the Solution Works
 1. **Location Selection:** User searches any global city or selects from popular presets. The Open-Meteo Geocoding API resolves exact coordinates.
-2. **Atmospheric Fetch:** Server queries Open-Meteo Air Quality API for real-time US AQI and pollutant concentrations (PM2.5, PM10, NO₂, O₃, CO, SO₂).
+2. **Atmospheric Fetch:** Server queries Open-Meteo Air Quality API for real-time US AQI and pollutant concentrations ($\text{PM}_{2.5}$, $\text{PM}_{10}$, $\text{NO}_2$, $\text{O}_3$, $\text{CO}$, $\text{SO}_2$).
 3. **Deterministic Evaluation:** `CleanAirRecommendationEngine` combines ambient atmospheric readings with user household profile (children, seniors, outdoor worker, purifier status, commute distance).
 4. **Actionable Plan Generation:** Yields a balanced 5-pillar daily action plan (Outdoor, Indoor, Mobility, Family, Sustainability) with priority rankings, evidence-based rationales, and expected benefits.
 5. **Impact Logging:** User checks off completed actions or logs low-emission commutes. Avoided emissions and habits are persisted in browser `localStorage`.
@@ -129,6 +147,7 @@ Users configure an editable profile that instantly updates generated clean-air p
   - Payloads exceeding 15 KB are rejected.
   - In-memory IP rate limiting enforces a maximum of 20 requests per minute per IP.
 - **Deterministic Source of Truth:** System prompts instruct Groq to act strictly as an empathetic explanation layer for the deterministic recommendation engine. The model is forbidden from inventing AQI numbers, overriding safety constraints, or dispensing medical diagnoses.
+- **Active Model:** Powered by `qwen/qwen3.8-27b` on Groq, delivering sub-second response times.
 - **Graceful Zero-Key Fallback:** If `GROQ_API_KEY` is omitted, BreatheWise operates 100% functionally using deterministic keyword and rule heuristics.
 
 ---
@@ -146,7 +165,8 @@ Users configure an editable profile that instantly updates generated clean-air p
 ---
 
 ## 12. Data Sources & AQI Interpretation Notice
-> **Important Distinction:** The air quality index presented in BreatheWise is the **United States EPA Air Quality Index (US AQI)** retrieved from Open-Meteo's atmospheric dispersion model. It is **not** the official Indian Central Pollution Control Board (CPCB) National AQI (NAQI), which uses different pollutant breakpoint concentrations and 24-hour weighted averaging. BreatheWise explicitly identifies the index as US AQI across all UI components.
+> [!IMPORTANT]
+> **Index Identification:** The air quality index presented in BreatheWise is the **United States EPA Air Quality Index (US AQI)** retrieved from Open-Meteo's atmospheric dispersion model. It is **not** the official Indian Central Pollution Control Board (CPCB) National AQI (NAQI), which uses different pollutant breakpoint concentrations and 24-hour weighted averaging. BreatheWise explicitly identifies the index as US AQI across all UI components.
 
 **US AQI Categories:**
 - `0–50`: Good (Green)
@@ -160,6 +180,7 @@ Users configure an editable profile that instantly updates generated clean-air p
 
 ## 13. Emission Estimation Assumptions & Methodology
 BreatheWise estimates commute emissions using transparent, published life-cycle factors (DEFRA / IPCC / ARAI):
+
 $$\text{Estimated Emissions (g CO}_2\text{e)} = \text{Distance (km)} \times \text{Mode Factor (g CO}_2\text{e / passenger-km)}$$
 
 **Operational Factors Used:**
@@ -200,13 +221,14 @@ $$\text{Estimated Emissions (g CO}_2\text{e)} = \text{Distance (km)} \times \tex
 BreatheWise features unit, integration, and component tests running under Vitest and JSDOM:
 
 | Test Suite | Tests | Result | Focus |
-| :--- | :--- | :--- | :--- |
+| :--- | :---: | :---: | :--- |
 | `aqi-calculator.test.ts` | 9 | **Passed** | Boundary values (0, 50, 100, 150, 200, 300, 500+), NaN safety, float precision |
 | `recommendations-engine.test.ts` | 8 | **Passed** | Severity mapping, pediatric/geriatric rules, no-purifier routines, occupational guidance |
 | `emissions-calculator.test.ts` | 6 | **Passed** | Distance × Factor accuracy, carpool occupancy, severe air warnings, distance clamping |
 | `assistant-security.test.ts` | 6 | **Passed** | 500-char input limit, rate limiting, deterministic fallbacks, missing API key safety |
 | `recommendation-card.test.tsx` | 3 | **Passed** | DOM rendering, rationale expansion toggle, completion callback triggering |
-| **Total** | **32** | **32/32 Passed (100%)** | Full execution in 16.10s |
+| `groq-live.test.ts` | 1 | **Passed** | Live API integration test verifying end-to-end Groq query resolution |
+| **Total** | **33** | **33/33 Passed (100%)** | Full execution in 10.51s |
 
 ---
 
@@ -214,10 +236,10 @@ BreatheWise features unit, integration, and component tests running under Vitest
 Create a `.env.local` file in the project root:
 
 ```env
-# Optional Groq API Key (Server-side only)
+# Optional Groq AI Assistant (Server-side only)
 # If omitted or left empty, BreatheWise automatically runs using its deterministic rule engine
 GROQ_API_KEY=your_groq_api_key_here
-GROQ_MODEL=llama-3.3-70b-versatile
+GROQ_MODEL=qwen/qwen3.8-27b
 
 # Public metadata
 NEXT_PUBLIC_APP_NAME=BreatheWise
@@ -263,12 +285,17 @@ NEXT_PUBLIC_APP_NAME=BreatheWise
 
 ---
 
-## 19. Deployment Instructions (Vercel)
-BreatheWise is designed for one-click deployment on Vercel:
-1. Push repository to GitHub.
-2. Import project into Vercel Dashboard.
-3. Set optional environment variable: `GROQ_API_KEY` (if desired).
-4. Click **Deploy**. Vercel will run `npm run build` and provision serverless edge functions for route handlers.
+## 19. Deployment Instructions (Vercel & Render)
+For a full guide with detailed screenshots and platform-specific instructions, see [deployment_guide.md](file:///e:/PW-chal6-Urban-aqi/deployment_guide.md) or [GitHub Deployment Guide](https://github.com/AnuragMishra1234/pw-c6/blob/main/deployment_guide.md).
+
+### Quick Vercel Setup:
+1. Import repository `AnuragMishra1234/pw-c6` into [Vercel](https://vercel.com).
+2. Framework is auto-detected as **Next.js**.
+3. Add Environment Variable:
+   - `GROQ_API_KEY` = `your_key`
+   - `GROQ_MODEL` = `qwen/qwen3.8-27b`
+   - `NEXT_PUBLIC_APP_NAME` = `BreatheWise`
+4. Click **Deploy**. Live URL: [https://pw-c6.vercel.app/](https://pw-c6.vercel.app/)
 
 ---
 
@@ -288,4 +315,5 @@ BreatheWise is designed for one-click deployment on Vercel:
 
 ---
 
-*BreatheWise — Built with care for Challenge 6 | Urban Air Quality Assistant.*
+*BreatheWise — Built with care for Challenge 6 | Urban Air Quality Assistant.*  
+*Live at: [https://pw-c6.vercel.app/](https://pw-c6.vercel.app/)*
