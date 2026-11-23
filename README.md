@@ -5,7 +5,7 @@
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-133124?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AnuragMishra1234/pw-c6)
 [![Next.js 14](https://img.shields.io/badge/Next.js-14.2%20App%20Router-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6%20Strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Tests Passing](https://img.shields.io/badge/Vitest-33%2F33%20Passing-16A34A?style=for-the-badge&logo=vitest&logoColor=white)](https://github.com/AnuragMishra1234/pw-c6)
+[![Tests Passing](https://img.shields.io/badge/Vitest-43%2F43%20Passing-16A34A?style=for-the-badge&logo=vitest&logoColor=white)](https://github.com/AnuragMishra1234/pw-c6)
 
 > **Core Philosophy:** *"Don't just show pollution. Help people make better decisions because of it."*
 
@@ -226,9 +226,11 @@ BreatheWise features unit, integration, and component tests running under Vitest
 | `recommendations-engine.test.ts` | 8 | **Passed** | Severity mapping, pediatric/geriatric rules, no-purifier routines, occupational guidance |
 | `emissions-calculator.test.ts` | 6 | **Passed** | Distance × Factor accuracy, carpool occupancy, severe air warnings, distance clamping |
 | `assistant-security.test.ts` | 6 | **Passed** | 500-char input limit, rate limiting, deterministic fallbacks, missing API key safety |
+| `routes.test.ts` | 7 | **Passed** | API Route Handlers for geocoding, air-quality, and assistant parameter validation |
+| `indoor-advisor.test.ts` | 3 | **Passed** | Indoor guidance coverage, zero-cost wet cleaning, and myth-busting databases |
 | `recommendation-card.test.tsx` | 3 | **Passed** | DOM rendering, rationale expansion toggle, completion callback triggering |
 | `groq-live.test.ts` | 1 | **Passed** | Live API integration test verifying end-to-end Groq query resolution |
-| **Total** | **33** | **33/33 Passed (100%)** | Full execution in 10.51s |
+| **Total** | **43** | **43/43 Passed (100%)** | Full execution across unit, API, integration & UI components |
 
 ---
 

@@ -95,7 +95,11 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-[#F8FAF9]">
       {/* Toast banner */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 rounded-2xl bg-forest-800 text-white px-4 py-3 shadow-elevated text-xs sm:text-sm font-semibold flex items-center gap-2 border border-forest-600 animate-in slide-in-from-bottom duration-200">
+        <div
+          role="status"
+          aria-live="polite"
+          className="fixed bottom-6 right-6 z-50 rounded-2xl bg-forest-800 text-white px-4 py-3 shadow-elevated text-xs sm:text-sm font-semibold flex items-center gap-2 border border-forest-600 animate-in slide-in-from-bottom duration-200"
+        >
           <span>✓</span>
           <span>{toastMessage}</span>
         </div>
@@ -111,7 +115,11 @@ export default function Home() {
       />
 
       {/* Main Body */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <main
+        id="main-content"
+        tabIndex={-1}
+        className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 focus:outline-none"
+      >
         {currentTab === "dashboard" && (
           <DashboardView
             airQuality={airQuality}

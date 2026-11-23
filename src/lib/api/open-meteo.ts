@@ -10,6 +10,44 @@ const GEOCODING_BASE_URL = "https://geocoding-api.open-meteo.com/v1/search";
 const AIR_QUALITY_BASE_URL = "https://air-quality-api.open-meteo.com/v1/air-quality";
 const DEFAULT_TIMEOUT_MS = 9000;
 
+interface RawGeocodingItem {
+  id: number;
+  name: string;
+  latitude: number;
+  longitude: number;
+  country?: string;
+  admin1?: string;
+  country_code?: string;
+  population?: number;
+}
+
+interface RawGeocodingResponse {
+  results?: RawGeocodingItem[];
+}
+
+interface RawAirQualityCurrent {
+  time?: string;
+  us_aqi?: number;
+  pm10?: number;
+  pm2_5?: number;
+  carbon_monoxide?: number;
+  nitrogen_dioxide?: number;
+  ozone?: number;
+  sulphur_dioxide?: number;
+}
+
+interface RawAirQualityHourly {
+  time?: string[];
+  us_aqi?: number[];
+  pm10?: number[];
+  pm2_5?: number[];
+}
+
+interface RawAirQualityResponse {
+  current?: RawAirQualityCurrent;
+  hourly?: RawAirQualityHourly;
+}
+
 /**
  * Searches locations using Open-Meteo Geocoding API.
  */
@@ -44,12 +82,12 @@ export async function searchLocations(
       throw new Error(`Geocoding API responded with HTTP status ${response.status}`);
     }
 
-    const data = await response.json();
+    const data: RawGeocodingResponse = await response.json();
     if (!data.results || !Array.isArray(data.results)) {
       return [];
     }
 
-    return data.results.map((item: any) => ({
+    return data.results.map((item: RawGeocodingItem) => ({
       id: item.id,
       name: item.name,
       latitude: item.latitude,
@@ -59,12 +97,13 @@ export async function searchLocations(
       country_code: item.country_code || "",
       population: item.population,
     }));
-  } catch (error: any) {
+  } catch (error: unknown) {
     clearTimeout(timeoutId);
-    if (error.name === "AbortError") {
+    const err = error instanceof Error ? error : new Error(String(error));
+    if (err.name === "AbortError") {
       throw new Error("Location search timed out. Please check your internet connection.");
     }
-    throw error;
+    throw err;
   }
 }
 
@@ -109,7 +148,7 @@ export async function fetchAirQualityData(
       throw new Error(`Air Quality API responded with HTTP status ${response.status}`);
     }
 
-    const json = await response.json();
+    const json: RawAirQualityResponse = await response.json();
 
     if (!json.current) {
       throw new Error("Air Quality API response did not contain current readings");
@@ -147,7 +186,9 @@ export async function fetchAirQualityData(
 
       // Find current hour index or start from 0
       const currentIsoTime = cur.time;
-      let startIndex = times.findIndex((t) => t.startsWith(currentIsoTime?.substring(0, 13)));
+      let startIndex = times.findIndex((t) =>
+        Boolean(currentIsoTime && t.startsWith(currentIsoTime.substring(0, 13)))
+      );
       if (startIndex < 0) startIndex = 0;
 
       // Extract next 24 hours
@@ -176,11 +217,12 @@ export async function fetchAirQualityData(
       dataSource: "Open-Meteo Air Quality API",
       indexStandard: "US AQI (EPA standard, retrieved from Open-Meteo; not official Indian CPCB)",
     };
-  } catch (error: any) {
+  } catch (error: unknown) {
     clearTimeout(timeoutId);
-    if (error.name === "AbortError") {
+    const err = error instanceof Error ? error : new Error(String(error));
+    if (err.name === "AbortError") {
       throw new Error("Air quality request timed out. Please try again.");
     }
-    throw error;
+    throw err;
   }
 }

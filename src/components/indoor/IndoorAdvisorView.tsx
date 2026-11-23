@@ -19,13 +19,13 @@ import {
   Filter,
 } from "lucide-react";
 
+type IndoorTabType = "all" | "low_cost" | "ventilation" | "purifiers" | "household" | "myths";
+
 export const IndoorAdvisorView: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<
-    "all" | "low_cost" | "ventilation" | "purifiers" | "household" | "myths"
-  >("all");
+  const [activeTab, setActiveTab] = useState<IndoorTabType>("all");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
-  const tabs = [
+  const tabs: Array<{ id: IndoorTabType; label: string }> = [
     { id: "all", label: "All Guidelines" },
     { id: "low_cost", label: "Low-Cost / Free Actions" },
     { id: "ventilation", label: "Ventilation Timing" },
@@ -68,7 +68,7 @@ export const IndoorAdvisorView: React.FC = () => {
           <button
             key={tab.id}
             onClick={() => {
-              setActiveTab(tab.id as any);
+              setActiveTab(tab.id);
               setSelectedTag(null);
             }}
             className={`pb-3 px-3 text-sm font-semibold transition border-b-2 whitespace-nowrap ${
@@ -132,7 +132,7 @@ export const IndoorAdvisorView: React.FC = () => {
                       Common Misconception
                     </span>
                     <h4 className="text-sm font-bold text-gray-900 mt-0.5 leading-snug">
-                      "{mf.myth}"
+                      &ldquo;{mf.myth}&rdquo;
                     </h4>
                   </div>
                 </div>

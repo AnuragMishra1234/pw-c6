@@ -74,7 +74,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div>
           <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-forest-900">
-            {greeting}. Let's make today a cleaner-air day.
+            {greeting}. Let&apos;s make today a cleaner-air day.
           </h1>
           <div className="flex flex-wrap items-center gap-2 mt-1.5 text-xs text-gray-500">
             <span className="font-semibold text-forest-800">
@@ -114,7 +114,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 className="text-lg font-bold text-gray-900 flex items-center gap-2"
               >
                 <Sparkles className="h-5 w-5 text-forest-600" />
-                Today's Priority Action Plan
+                Today&apos;s Priority Action Plan
               </h2>
               <p className="text-xs text-gray-500">
                 Tailored for {cleanAirPlan.locationName} based on current US AQI{" "}

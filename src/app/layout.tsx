@@ -35,6 +35,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className="min-h-screen bg-[#F8FAF9] text-[#133124] antialiased selection:bg-forest-100 selection:text-forest-900">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:top-4 focus:left-4 focus:p-3 focus:bg-forest-800 focus:text-white focus:rounded-xl focus:shadow-elevated focus:outline-none focus:ring-2 focus:ring-white text-xs font-bold"
+        >
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>

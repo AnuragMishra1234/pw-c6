@@ -61,7 +61,7 @@ export const SmartMobilityView: React.FC<SmartMobilityViewProps> = ({
         </h2>
         <p className="mt-2 text-sm text-forest-100/90 max-w-2xl leading-relaxed">
           Commuting choices directly affect your personal inhaled toxic dose and your
-          neighborhood's tailpipe footprint. Understand the vital difference between{" "}
+          neighborhood&apos;s tailpipe footprint. Understand the vital difference between{" "}
           <strong>reducing personal roadside exposure</strong> and{" "}
           <strong>cutting operational transport emissions</strong>.
         </p>

@@ -49,7 +49,7 @@ export const ImpactTrackerView: React.FC<ImpactTrackerViewProps> = ({
         </h2>
         <p className="mt-2 text-sm text-forest-100/90 max-w-2xl leading-relaxed">
           Small everyday adjustments—taking the metro, eliminating domestic smoke, and damp
-          dusting—cumulatively lower neighborhood emissions and shield your family's lungs.
+          dusting—cumulatively lower neighborhood emissions and shield your family&apos;s lungs.
         </p>
       </div>
 

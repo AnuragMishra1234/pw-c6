@@ -253,29 +253,31 @@ export const HouseholdPreferencesModal: React.FC<HouseholdPreferencesModalProps>
 
               {/* Toggles */}
               <div className="space-y-2.5">
-                {[
-                  {
-                    key: "hasAirPurifier",
-                    label: "I have a HEPA Air Purifier at home",
-                    desc: "Enables purifier optimization routines; if unchecked, suggests affordable damp cleaning methods.",
-                  },
-                  {
-                    key: "nearBusyRoad",
-                    label: "Home is located near a busy road / traffic artery",
-                    desc: "Triggers roadside draft-proofing and window sealing alerts.",
-                  },
-                  {
-                    key: "hasNaturalVentilation",
-                    label: "Home has cross-ventilation windows",
-                    desc: "Advises on safe midday aeration timing.",
-                  },
-                  {
-                    key: "hasIndoorPlants",
-                    label: "I keep indoor potted plants",
-                    desc: "Personalizes plant care and debunking misconceptions.",
-                  },
-                ].map((item) => {
-                  const checked = (formData.indoorEnvironment as any)[item.key];
+                {(
+                  [
+                    {
+                      key: "hasAirPurifier",
+                      label: "I have a HEPA Air Purifier at home",
+                      desc: "Enables purifier optimization routines; if unchecked, suggests affordable damp cleaning methods.",
+                    },
+                    {
+                      key: "nearBusyRoad",
+                      label: "Home is located near a busy road / traffic artery",
+                      desc: "Triggers roadside draft-proofing and window sealing alerts.",
+                    },
+                    {
+                      key: "hasNaturalVentilation",
+                      label: "Home has cross-ventilation windows",
+                      desc: "Advises on safe midday aeration timing.",
+                    },
+                    {
+                      key: "hasIndoorPlants",
+                      label: "I keep indoor potted plants",
+                      desc: "Personalizes plant care and debunking misconceptions.",
+                    },
+                  ] as const
+                ).map((item) => {
+                  const checked = formData.indoorEnvironment[item.key];
                   return (
                     <label
                       key={item.key}

@@ -10,7 +10,7 @@ export const AssistantRequestSchema = z.object({
     aqi: z.number(),
     aqiCategory: z.string(),
     timestamp: z.string().optional(),
-    pollutants: z.record(z.any()).optional(),
+    pollutants: z.record(z.union([z.number(), z.null(), z.string()])).optional(),
   }),
   preferences: z.object({
     householdType: z.string(),
